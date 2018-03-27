@@ -10,7 +10,7 @@ import "fmt"
  * params: 一个以逗号分隔的整数列表，数量不限
  * return: 一个通道，包含参数中整数列表的通道
  */
-func Gen(nums ... int) <-chan int {
+func Gen(nums ...int) <-chan int {
 	out := make(chan int)
 	// 通过一个goroutine来将参数中的每个整数发送到通道中去。
 	go func() {
